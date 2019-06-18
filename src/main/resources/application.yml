@@ -1,0 +1,23 @@
+server:
+  port: 8088
+  servlet:
+    context-path: /commodity
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/mydemo?useCharactorEncoding=utf-8&useSSL=false&serverTimezone=UTC
+    username: root
+    password: 123456
+    druid:
+      max-active: 10
+  #resources:
+    #static-locations: 配置静态资源文件路径
+mybatis:
+  mapper-locations: classpath:mappers/*Mapper.xml
+  #config-location: classpath:mybatis-config.xml  使用这个配置文件
+  #type-aliases-package:扫描包
+
+logging:
+  level:
+    com.xiami.springboot.sbootdemo.mapper : debug

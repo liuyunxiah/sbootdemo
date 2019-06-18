@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xiami.springboot.sbootdemo.mapper.TypeMapper">
+    <!--查询Type-->
+    <select id="selectType" resultType="com.xiami.springboot.sbootdemo.domain.Type">
+        select * from `type`
+        where bflag=1
+    </select>
+</mapper>
